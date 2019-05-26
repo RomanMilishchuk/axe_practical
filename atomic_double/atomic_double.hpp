@@ -12,7 +12,7 @@ namespace std {
     public:
         atomic() = default;
 
-        atomic(double a);
+        explicit atomic(double a);
 
         ~atomic() = default;
 
@@ -33,14 +33,14 @@ namespace std {
 
         template<typename RhsT>
         double operator+=(RhsT rhs) {
-            std::lock_guard<std::mutex> lg{lock};
+            lock_guard<mutex> lg{lock};
             container += rhs;
             return container;
         }
 
         template<typename RhsT>
         double operator-=(RhsT rhs) {
-            std::lock_guard<std::mutex> lg{lock};
+            lock_guard<mutex> lg{lock};
             container -= rhs;
             return container;
         }

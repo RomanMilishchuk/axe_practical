@@ -7,31 +7,31 @@ namespace std {
     bool atomic<double>::is_lock_free() { return false; }
 
     double atomic<double>::operator++() {
-        std::lock_guard<std::mutex> lg{lock};
+        lock_guard<mutex> lg{lock};
         double a{container};
         container++;
         return a;
     }
 
     double atomic<double>::operator--() {
-        std::lock_guard<std::mutex> lg{lock};
+        lock_guard<mutex> lg{lock};
         double a{container};
         container--;
         return a;
     }
 
     double atomic<double>::operator++(int) {
-        std::lock_guard<std::mutex> lg{lock};
+        lock_guard<mutex> lg{lock};
         return ++container;
     }
 
     double atomic<double>::operator--(int) {
-        std::lock_guard<std::mutex> lg{lock};
+        lock_guard<mutex> lg{lock};
         return --container;
     }
 
     ostream &operator<<(ostream &out, const atomic<double> &c) {
-        out << c.container << endl;
+        out << c.container;
         return out;
     }
 
