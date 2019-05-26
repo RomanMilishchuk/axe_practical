@@ -1,9 +1,4 @@
 #include <utility>
-
-//
-// Created by hermann on 26.05.19.
-//
-
 #include "atomic_string.hpp"
 #include <iostream>
 

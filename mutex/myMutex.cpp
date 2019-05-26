@@ -1,7 +1,3 @@
-//
-// Created by YuraYeliseev on 2019-05-26.
-//
-
 #include "myMutex.h"
 
 myMutex::myMutex(){
@@ -25,8 +21,12 @@ void myMutex::unlock(){
 }
 int myMutex::try_lock(){
     int rv = pthread_mutex_trylock(&_mutex);
-    if(rv == 0 || rv == 16) return 0;
-    else return -1;
+    if(rv == 0) {return 1}
+	else if(rv == 16) {
+return 0;}
+    else {
+	throw std::runtime_error("Error while lock happened!");
+}
 }
 
 void worker(int &var, int value, myMutex &mtx, std::vector<int>& check_vec){

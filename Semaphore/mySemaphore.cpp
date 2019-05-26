@@ -1,7 +1,3 @@
-//
-// Created by YuraYeliseev on 2019-05-26.
-//
-
 #include "mySemaphore.h"
 
 Semaphore::Semaphore(const size_t per_value) : permissions_number(per_value), available(per_value) {}

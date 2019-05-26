@@ -1,7 +1,3 @@
-//
-// Created by hermann on 26.05.19.
-//
-
 #ifndef ATOMIC_STRING_ATOMIC_STRING_HPP
 #define ATOMIC_STRING_ATOMIC_STRING_HPP
 

@@ -1,7 +1,3 @@
-//
-// Created by Andriy on 2019-05-26.
-//
-
 #include "thread_safe_queue.h"
 
 template<class T>
@@ -26,8 +22,6 @@ T ConcurrentQueue<T>::pop() {
     cv.wait(lock, [this] { return !deque.empty(); });
     T elem = deque.front();
     deque.pop();
-    lock.unlock();
-    cv.notify_one();
     return elem;
 }
 
@@ -39,5 +33,6 @@ size_t ConcurrentQueue<T>::size() {
 
 template<class T>
 bool ConcurrentQueue<T>::empty() {
-    return size() == 0;
+    std::unique_lock<std::mutex> lock(mt);
+    return deque.size() == 0;
 }

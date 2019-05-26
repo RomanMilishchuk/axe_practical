@@ -1,7 +1,3 @@
-//
-// Created by Andriy on 2019-05-26.
-//
-
 #ifndef AXE_PRACTICAL_THREAD_SAFE_QUEUE_H
 #define AXE_PRACTICAL_THREAD_SAFE_QUEUE_H
 

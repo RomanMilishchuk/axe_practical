@@ -1,7 +1,3 @@
-//
-// Created by YuraYeliseev on 2019-05-26.
-//
-
 #ifndef ACS_EXAM_MYSEMAPHORE_H
 #define ACS_EXAM_MYSEMAPHORE_H
 
