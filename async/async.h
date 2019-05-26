@@ -2,7 +2,6 @@
 #define ASYNC_ASYNC_H
 
 #include <future>
-#include <iostream>
 
 namespace launch {
     enum parameters {
