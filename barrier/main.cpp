@@ -8,6 +8,8 @@ void do_something(barrier *barr) {
     barr->wait(4);
     std::cout << "world" << std::endl;
     barr->wait(4);
+    std::cout << " New " << std::endl;
+    barr->wait(4);
     std::cout << " Guy " << std::endl;
 }
 
