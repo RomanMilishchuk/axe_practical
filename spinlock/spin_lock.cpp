@@ -10,7 +10,9 @@ bool spin_lock::is_locked() {
 }
 
 void spin_lock::lock() {
-    while(is_locked()){}
+    while(is_locked()){
+        std::this_thread::yield();
+    }
 }
 
 void spin_lock::unlock() {

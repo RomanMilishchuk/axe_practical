@@ -1,7 +1,3 @@
-//
-// Created by hermann on 26.05.19.
-//
-
 #ifndef SPINLOCK_SPIN_LOCK_HPP
 #define SPINLOCK_SPIN_LOCK_HPP
 
